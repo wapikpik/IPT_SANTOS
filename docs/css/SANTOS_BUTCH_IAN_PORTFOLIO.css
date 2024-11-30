@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(..Img/c2c02807d635ba14cb94b49a806ecd54.jpg");
+    background-image: url(../Img/c2c02807d635ba14cb94b49a806ecd54.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
