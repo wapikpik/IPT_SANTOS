@@ -4,60 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Butch Ian Santos - Profile</title>
-    <link rel="stylesheet" href="css/SANTOS_BUTCH_IAN_PORTFOLIO.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Combine the gradient and image as background */
+            background: linear-gradient(to bottom, #e0f7fa, #f1f8e9), 
+                        url("Img/c2c02807d635ba14cb94b49a806ecd54.jpg");
+            background-size: cover;            
+            background-position: center;       
+            background-attachment: fixed;     
+            color: #ffffff;                   
+            line-height: 1.6;                 
+            display: flex;                      
+            flex-direction: column;             
+            align-items: center;              
+            margin: 0;                          
+            padding: 0;                         
+        }
+
+        /* Additional styling for header, sections, etc. */
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-   
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">My Profile</a></li>
-            <li><a href="about.html">About Me</a></li>
-        </ul>
-    </nav>
+
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">My Profile</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <header id="profile">
+    <section id="profile">
         <div class="header-content">
-            <img src="Img\266689062_10220770805397021_2973530835432189760_n.jpg" alt="Profile Picture" class="profile-pic">
+            <img src="Img/266689062_10220770805397021_2973530835432189760_n.jpg" alt="Profile Picture" class="profile-pic">
             <h1>Butch Ian Santos</h1>
             <p>Web Developer | Web Enthusiast | Tech Enthusiast</p>
         </div>
-    </header>
+    </section>
+    
     <main>
-        <!-- Cards Section -->
         <section class="cards-section">
             <div class="card">
-                <img src="Img\367461267_10223980026745549_721980798860277324_n.jpg" alt="Card 1 Image" class="card-img">
+                <img src="Img/367461267_10223980026745549_721980798860277324_n.jpg" alt="Card Image" class="card-img">
                 <h3>Mt. Pulag</h3>
-                
             </div>
             <div class="card">
-                <img src="Img\449434482_10225523716416826_702782354883927884_n.jpg" alt="Card 2 Image" class="card-img">
+                <img src="Img/449434482_10225523716416826_702782354883927884_n.jpg" alt="Card Image" class="card-img">
                 <h3>Mt. Batulao</h3>
-                
             </div>
             <div class="card">
-                <img src="Img\68809562_10214910780700066_2246312821165916160_n.jpg" alt="Card 3 Image" class="card-img">
+                <img src="Img/68809562_10214910780700066_2246312821165916160_n.jpg" alt="Card Image" class="card-img">
                 <h3>Mt. Tapulao</h3>
-                
             </div>
-
-            <div class="bio">
-                <h3>My Bio</h3>
-                <p><strong>Name:</strong> Santos, Butch Ian, D.</p>
-                <p><strong>Birthday:</strong> January 16, 1991</p>
-                <p><strong>Religion:</strong> Catholic</p>
-                <p><strong>Sex:</strong> Male</p>
-                <p><strong>Primary:</strong> Malabon Elementary School</p>
-                <p><strong>Secondary:</strong> Malabon National High School</p>
-                <p><strong>Tertiary:</strong>City of Malabon University</p>
-            </div>
-
         </section>
-
-        
     </main>
+    
     <footer>
         <p>© 2024 Butch Ian Santos. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
