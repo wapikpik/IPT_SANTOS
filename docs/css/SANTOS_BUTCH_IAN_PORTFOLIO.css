@@ -14,12 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("Img/c2c02807d635ba14cb94b49a806ecd54.jpg");
- /* Replace with your actual image path */
-    background-size: cover; /* Scale to cover the entire viewport */
-    background-position: center;
-    background-attachment: fixed; /* Makes the background stay in place when scrolling */
-    margin: 0; /* Reset margins */
+    
 }
 
 /* Navbar Styles */
