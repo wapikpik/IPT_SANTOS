@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santos MDAS Calculator</title>
+    <style>
+        /* Page background color */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3; /* Light grey */
+        }
+
+        /* Form container styling */
+        .form-container {
+            background-color: #003366; /* Dark blue */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            color: #ffffff; /* White text for contrast */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Button styling */
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        button[type="button"]:first-child {
+            background-color: #4CAF50; /* Green */
+        }
+
+        button[type="button"]:last-child {
+            background-color: #f44336; /* Red */
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .font-buttons {
+            margin-top: 10px;
+        }
+
+        .font-buttons button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #007bff; /* Blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Santos MDAS Calculator</h2>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="num1">Number:</label>
+                <input type="number" id="num1" required>
+            </div>
+            <div class="form-group">
+                <label for="num2">Number:</label>
+                <input type="number" id="num2" required>
+            </div>
+            <div class="form-group">
+                <label for="num3">Number:</label>
+                <input type="number" id="num3" required>
+            </div>
+            <div class="form-group">
+                <label for="num4">Number:</label>
+                <input type="number" id="num4" required>
+            </div>
+            <div class="form-group">
+                <label for="num5">Number:</label>
+                <input type="number" id="num5" required>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="calculateMDAS()">Calculate</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+
+        <h3 id="result">Result: </h3>
+
+        <div class="font-buttons">
+            <button onclick="increaseFontSize()">Increase Font Size</button>
+            <button onclick="decreaseFontSize()">Decrease Font Size</button>
+        </div>
+    </div>
+
+    <script>
+        function calculateMDAS() {
+            // Get numbers from input fields
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const num3 = parseFloat(document.getElementById('num3').value);
+            const num4 = parseFloat(document.getElementById('num4').value);
+            const num5 = parseFloat(document.getElementById('num5').value);
+
+            // Calculate according to MDAS order
+            const result = (num1 + num2) * num3 / num4 - num5;
+
+            // Display the result
+            document.getElementById('result').innerText = `Result: ${result}`;
+        }
+
+        function clearForm() {
+            // Clear all input fields
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('num3').value = '';
+            document.getElementById('num4').value = '';
+            document.getElementById('num5').value = '';
+
+            // Clear the result display
+            document.getElementById('result').innerText = 'Result: ';
+        }
+
+        function increaseFontSize() {
+            const resultElement = document.getElementById('result');
+            let fontSize = parseFloat(window.getComputedStyle(resultElement).fontSize);
+            resultElement.style.fontSize = (fontSize + 2) + 'px';
+        }
+
+        function decreaseFontSize() {
+            const resultElement = document.getElementById('result');
+            let fontSize = parseFloat(window.getComputedStyle(resultElement).fontSize);
+            resultElement.style.fontSize = (fontSize - 2) + 'px';
+        }
+    </script>
+
+</body>
+</html>
